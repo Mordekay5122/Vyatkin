@@ -10,7 +10,7 @@ $mysqli->query("SET NAMES 'utf8'");
 	if ($type == 1) {
 		$query3 = "SELECT id_product, name_product, FK_category, manufacturer, country, price, picture, description FROM products WHERE FK_category = 1 and id_product=".$product_index;}
 	else {
-		$query3 = "SELECT id_product, name_product, FK_category, manufacturer, country, price, picture FROM products WHERE FK_category = 2 and  id_product=".$product_index;}
+		$query3 = "SELECT id_product, name_product, FK_category, manufacturer, country, price, picture, description FROM products WHERE FK_category = 2 and  id_product=".$product_index;}
 $result3 = $mysqli->query($query3);
 
 include("header.php");
@@ -24,16 +24,13 @@ include("header.php");
 				<?php $row3 = $result3->fetch_assoc()?>
 				<img src = "css/images/<?php print $row3['picture'];?>" width="342" height="399">
 			</div>
-			<div class="products">
+			<div class="desc">
 				<ul>
-						    <table>
-						    <tr><td><h2> Описание <?php print $row3["name_product"];?></h2></td></tr>
-						    <tr><td> <?php print $row3["description"];?></td></tr>
-							<tr><td><i>Производитель: <?php print $row3["manufacturer"];?></i></td></tr>	
-							<tr><td><i>Страна: <?php print $row3["country"];?></i></td></tr>
-							<tr><td>Цена: <i><?php print $row3["price"];?></i></td></tr>
-							</tr>
-							</table>
+					<li><h2> Описание <?php print $row3["name_product"];?></h2></li>
+					<li><?php print $row3["description"];?></li>
+					<li>Производитель: <i><?php print $row3["manufacturer"];?></i></li>
+					<li>Страна: <i><?php print $row3["country"];?></i></li>
+					<li>Цена: <i><?php print $row3["price"];?>  руб.</i></li>
 				</ul>
 			</div>
 		<div class="pay-btn">
@@ -45,6 +42,6 @@ include("header.php");
 	
 </div>	
 <!-- End Shell -->
-
+<!-- End Shell -->
 </body>
 </html>

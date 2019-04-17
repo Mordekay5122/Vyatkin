@@ -539,5 +539,84 @@ h3.ico4 {
 .product_info{
 	position:relative; 
 	width:960px; 
-	height:700px; 
+	height:450px; 
 }
+
+.product_info h2{
+	font-size:20px; 
+	line-height:14px; 
+	text-transform: uppercase;
+	color:#000; 
+}
+
+
+.product_info .pay-btn{
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    /* margin: 20px; */
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px; 
+    background-color: #4b367c;
+}
+
+.product_info .pay-btn p{
+    transform: translate(0%, 0px);
+    color:#fff;
+}
+
+.product_info .pay-btn:hover{
+    background-color: #fff;
+    border: 2px solid #4b367c;
+    transition: 6ms;
+    color:#000;
+    height: 46px;
+    width: 176px;
+}
+.product_info .pay-btn:hover p{
+    background-color: #fff;
+    transition: 6ms;
+    color:#4b367c;
+}
+
+.product_info .picture{
+	position:relative; 
+	padding:1px; 
+	border:solid 1px #dedede; 
+	float:left; 
+	width:231px; 
+	margin-right:9px; 
+	/*margin-left: 7px;*/
+	height:383px; 
+	overflow:hidden;
+}
+
+.product_info .desc{
+	font-size:17px;
+	line-height:19px;
+	font-weight: 900;
+}
+
+.product_info .desc ul li{
+	list-style-type: none;
+}
+
+
+.product_info .desc h2{
+	font-size:21px;
+	line-height:25px; 
+}
+
+/*.product_info .desc i{
+	font-weight: bolder;
+}
+*/
+
+
